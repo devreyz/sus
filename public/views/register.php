@@ -17,7 +17,7 @@
         <nav class="mx-auto px-4 container flex gap-6 items-center">
 
             <div class="">
-                <img class="w-20 h-20" src="../public/assets/sus-brasil-logo.svg" alt="" />
+                <img class="w-20 h-20" src="public/assets/sus-brasil-logo.svg" alt="" />
             </div>
             <div class="container mx-auto">
                 <h1 class="text-3xl font-bold">Seja Bem-vindo!</h1>

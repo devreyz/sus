@@ -16,6 +16,9 @@
                 include "config.php";
 
                 switch (@$_REQUEST["app"]) {
+                  case "":
+                    include "public/views/home.php";
+                    break;
                   case "register":
                     include "public/views/register.php";
                     break;
@@ -32,24 +35,13 @@
                     include "public/views/list-consult.php";
                     break;
 
-                  // case "new":
-                  //     include "new-user.php";
-                  //     break;
-                  // case "list":
-                  //     include "list-users.php";
+                    case "fill-profile":
+                    include "public/views/fill-profile.php";
+                    break;
 
-                  //     break;
-                  // case "save":
-                  //     include "save-user.php";
-
-                  //     break;
-                  // case "edit-user":
-                  //     include "edit-user.php";
-
-                  //     break;
-
+                  
                   default:
-                    include "public/views/home.php";
+                    include "public/views/404.php";
                     break;
                 }
                 ?>
