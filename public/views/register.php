@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <!-- Adicione o link para o CSS do Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        /* Adicione estilos personalizados aqui, se necessário */
-    </style>
+    <link rel="stylesheet" href="public/views/css/style.css" type="text/css" media="all" />
+
+
 </head>
 
 <body class="bg-gray-100 h-screen flex flex-col justify-between">
@@ -54,7 +53,7 @@
                     <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Cadastrar</button>
                 </form>
                 <p class="mt-4 text-sm text-gray-600">
-                    Já tem uma conta? <a href="/login" class="text-blue-500 hover:underline">Faça login aqui</a>.
+                    Já tem uma conta? <a href="?app=login" class="text-blue-500 hover:underline">Faça login aqui</a>.
                 </p>
             </div>
         </div>

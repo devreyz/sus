@@ -1,7 +1,7 @@
 <?php
-define('HOST', 'localhost');
+define('HOST', 'localhost:3306');
 define('USER', 'root');
-define('PASS', '');
-define('DATA', 'crud-php');
+define('PASS', 'root');
+define('DATA', 'sis-cad-sus');
 
 $conn = new mysqli(HOST, USER, PASS, DATA);

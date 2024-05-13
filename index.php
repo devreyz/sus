@@ -13,34 +13,46 @@
 <body>
     
                 <?php
-                include("config.php");
+                include "config.php";
 
                 switch (@$_REQUEST["app"]) {
+                  case "register":
+                    include "public/views/register.php";
+                    break;
+                  
+                  case "login":
+                    include "public/views/login.php";
+                    break;
+                    
+                    case "dashboard":
+                    include "public/views/dashboard.php";
+                    break;
+                    
+                    case "consults":
+                    include "public/views/list-consult.php";
+                    break;
 
-                    case "register":
-                        include "public/views/";
-                        break;
+                  // case "new":
+                  //     include "new-user.php";
+                  //     break;
+                  // case "list":
+                  //     include "list-users.php";
 
-                    // case "new":
-                    //     include "new-user.php";
-                    //     break;
-                    // case "list":
-                    //     include "list-users.php";
+                  //     break;
+                  // case "save":
+                  //     include "save-user.php";
 
-                    //     break;
-                    // case "save":
-                    //     include "save-user.php";
+                  //     break;
+                  // case "edit-user":
+                  //     include "edit-user.php";
 
-                    //     break;
-                    // case "edit-user":
-                    //     include "edit-user.php";
+                  //     break;
 
-                    //     break;
-
-                    default:
-                        include "public/views/home.php";
-                        break;
-                } ?>
+                  default:
+                    include "public/views/home.php";
+                    break;
+                }
+                ?>
       
 </body>
 

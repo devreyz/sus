@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <!-- Adicione o link para o CSS do Tailwind -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/views/css/style.css" type="text/css" media="all" />
 
     <style>
         /* Adicione estilos personalizados aqui, se necessário */
