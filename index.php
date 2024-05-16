@@ -31,6 +31,9 @@
                     include "public/views/dashboard.php";
                     break;
                     
+                    case "add-consult":
+                    include "public/views/add-consult.php";
+                    break;
                     case "consults":
                     include "public/views/list-consult.php";
                     break;
