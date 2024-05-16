@@ -44,9 +44,9 @@
       </div>
 
 
-      <div class="profile-icon relative" x-data="{ isOpen: false }">
+      <div class="profile-icon relative">
         <!-- User Information -->
-        <div class="flex flex-col items-center space-x-4 cursor-pointer" @click="isOpen = !isOpen">
+        <div class="flex flex-col items-center space-x-4 cursor-pointer">
           <div>
             <i class="fi fi-rs-user"></i>
           </div>
@@ -56,7 +56,7 @@
         </div>
 
         <!-- Dropdown Menu -->
-        <div x-show="isOpen" @click.away="isOpen = false" class="dropdown hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+        <div  class="dropdown hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
           <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             <a href="?app=register" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Meu Perfil</a>
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Configurações</a>

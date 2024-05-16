@@ -39,6 +39,13 @@
                     include "public/views/fill-profile.php";
                     break;
 
+                    case "admin-consults":
+                    include "public/views/admin-consults.php";
+                    break;
+                    case "login-adm":
+                    include "public/views/login-adm.php";
+                    break;
+
                   
                   default:
                     include "public/views/404.php";
