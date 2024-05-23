@@ -11,7 +11,7 @@
 
 </head>
 
-<body class="bg-gray-100 h-screen flex flex-col justify-between">
+<body class="bg-gray-100 h-screen flex flex-col">
   <!-- Header -->
   <header class="shadow bg-gradient-to-r from-blue-800 to-blue-500 text-white py-4 flex items-center">
     <nav class="mx-auto px-4 container flex gap-6 items-center">
