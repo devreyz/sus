@@ -22,6 +22,12 @@
                   case "register":
                     include "public/views/register.php";
                     break;
+                  case "register-user":
+                    include "models/registerUser.php";
+                    break;
+                  case "logout":
+                    include "public/views/logout.php";
+                    break;
                   
                   case "login":
                     include "public/views/login.php";

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,8 +28,30 @@
 </head>
 
 <body class="bg-gray-100 pb-0 mb-0">
-   
-<?php include "public/components/header.php"?>
+
+    <!-- Header -->
+    <header class="shadow sticky top-0 bg-gradient-to-r from-blue-800 to-blue-500 text-white py-4 flex items-center">
+        <nav class="mx-auto px-4 container flex gap-6 items-center">
+
+            <div class="">
+                <img class="w-20 h-20" src="public/assets/sus-brasil-logo.svg" alt="" />
+            </div>
+            <div class="container mx-auto flex justify-between items-center">
+                <div>
+
+                    <h1 class="text-3xl font-bold">Seja Bem-vindo!</h1>
+                    <p class="text-lg">
+                        Sua plataforma de saúde online.
+                    </p>
+                </div>
+                <div>
+                    <a href="?app=register" class="text-white px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-700 transition duration-300">Cadastrar</a>
+                    <a href="?app=login" class="text-white px-4 py-2 border border-white rounded hover:bg-white hover:text-blue-700 transition duration-300 ml-2">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
 
     <!-- Hero Section -->
     <section class="bg-gray-200 px-4 py-12">

@@ -1,3 +1,19 @@
+<?php
+session_start();
+// Verifica se a sessão do usuário está definida e se contém o ID do usuário
+if (!isset($_SESSION['user_id'])) {
+  // Se o usuário não estiver logado, redirecione para a página de login
+  header("Location: login.php");
+  exit();
+}
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -51,16 +67,16 @@
             <i class="fi fi-rs-user"></i>
           </div>
           <div class="overflow-hidden">
-            <p class="text-lg font-semibold max-w-20 truncate">Fulano da Silva</p>
+            <p class="text-lg font-semibold max-w-20 truncate"><?= $_SESSION["username"]?></p>
           </div>
         </div>
 
         <!-- Dropdown Menu -->
-        <div  class="dropdown hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
+        <div class="dropdown hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
           <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             <a href="?app=register" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Meu Perfil</a>
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Configurações</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sair</a>
+            <a href="?app=logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sair</a>
           </div>
         </div>
       </div>
