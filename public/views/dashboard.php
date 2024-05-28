@@ -47,7 +47,7 @@ if (!isset($_SESSION['user_id'])) {
 
 <body class="bg-gray-100">
   <!-- Header -->
-  <header class="shadow bg-gradient-to-r from-blue-800 to-blue-500 text-white py-4 flex items-center">
+  <header class="shadow bg-gradient-to-r from-blue-700 to-blue-500 text-white py-4 flex items-center">
     <nav class="mx-auto px-4 container flex gap-6 items-center">
       <div class="">
         <img class="w-20 h-20" src="public/assets/sus-brasil-logo.svg" alt="" />
@@ -62,19 +62,20 @@ if (!isset($_SESSION['user_id'])) {
 
       <div class="profile-icon relative">
         <!-- User Information -->
-        <div class="flex flex-col items-center space-x-4 cursor-pointer">
-          <div>
-            <i class="fi fi-rs-user"></i>
+        <div class="flex flex-col items-center  cursor-pointer">
+          <div class="w-12 h-12 relative rounded-full overflow-hidden">
+            <img class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="public/assets/profile.jpg" alt="" />
+
           </div>
           <div class="overflow-hidden">
-            <p class="text-lg font-semibold max-w-20 truncate"><?= $_SESSION["username"]?></p>
+            <p class="text-lg font-semibold max-w-20 truncate"><?= $_SESSION["username"] ?></p>
           </div>
         </div>
 
         <!-- Dropdown Menu -->
         <div class="dropdown hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10">
           <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-            <a href="?app=register" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Meu Perfil</a>
+            <a href="?app=user-profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Meu Perfil</a>
             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Configurações</a>
             <a href="?app=logout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sair</a>
           </div>
@@ -101,10 +102,67 @@ if (!isset($_SESSION['user_id'])) {
   </section>
 
   <!-- Dashboard Section -->
-  <section class="px-4 py-12">
+  <section class="container mx-auto px-4 py-12">
+
+
+
+    <!-- User Welcome Message -->
+    <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+      <h2 class="text-2xl font-bold mb-4">Olá, <?= $_SESSION["username"] ?>!</h2>
+      <p class="text-gray-700">Aqui você pode acessar suas consultas, verificar resultados de exames, agendar novos serviços e muito mais. Explore as opções abaixo:</p>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <!-- Consultas -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Consultas Agendadas</h3>
+        <p class="text-gray-700">Visualize suas consultas futuras e passadas, e agende novas conforme sua necessidade.</p>
+        <a href="?app=consults" class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded-md text-center hover:bg-blue-600">Ver Consultas</a>
+      </div>
+
+      <!-- Exames -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Resultados de Exames</h3>
+        <p class="text-gray-700">Acesse os resultados de seus exames diretamente pelo portal, de forma rápida e segura.</p>
+        <a href="?app=exam-results" class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded-md text-center hover:bg-blue-600">Ver Exames</a>
+      </div>
+
+      <!-- Agendamento -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Agendar Consultas</h3>
+        <p class="text-gray-700">Precisa marcar uma nova consulta? Agende facilmente pela plataforma.</p>
+        <a href="?app=add-consult" class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded-md text-center hover:bg-blue-600">Agendar Consulta</a>
+      </div>
+
+      <!-- Campanhas de Saúde -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Campanhas de Saúde</h3>
+        <p class="text-gray-700">Fique por dentro das campanhas de vacinação e outras iniciativas de saúde pública.</p>
+        <a href="?app=campaignes" class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded-md text-center hover:bg-blue-600">Ver Campanhas</a>
+      </div>
+
+      <!-- Perfil do Usuário -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Meu Perfil</h3>
+        <p class="text-gray-700">Veja e atualize suas informações pessoais, endereço e contato.</p>
+        <a href="?app=user-profile" class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded-md text-center hover:bg-blue-600">Ver Perfil</a>
+      </div>
+
+      <!-- Ajuda e Suporte -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <h3 class="text-xl font-bold mb-4">Ajuda e Suporte</h3>
+        <p class="text-gray-700">Precisa de ajuda? Acesse nossa seção de perguntas frequentes e suporte ao usuário.</p>
+        <a href="?app=support" class="block mt-4 bg-blue-500 text-white py-2 px-4 rounded-md text-center hover:bg-blue-600">Obter Suporte</a>
+      </div>
+    </section>
+
+
+
+
 
     <!-- User Data Component -->
-    <div class="user-data-container container mx-auto bg-white rounded-lg shadow-md p-6 mb-6">
+    <!-- <div class="user-data-container container mx-auto bg-white rounded-lg shadow-md p-6 mb-6">
       <h2 class="text-2xl font-bold mb-4">Seus Dados</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
@@ -159,7 +217,7 @@ if (!isset($_SESSION['user_id'])) {
       <div class="mt-4">
         <a href="?app=fill-profile" class="block text-center w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:bg-blue-600">Atualizar Dados</a>
       </div>
-    </div>
+    </div> -->
 
 
 
@@ -257,36 +315,7 @@ if (!isset($_SESSION['user_id'])) {
     </div>
   </footer>
 
-  <script type="text/javascript" charset="utf-8">
-    document.addEventListener('DOMContentLoaded', function() {
-      var dropdownTriggers = document.querySelectorAll('.profile-icon');
-      dropdownTriggers.forEach(function(trigger) {
-        trigger.addEventListener('click', function(event) {
-          event.stopPropagation();
-          trigger.classList.toggle('open');
-          var dropdownMenu = trigger.querySelector('.dropdown');
-          if (dropdownMenu.classList.contains('hidden')) {
-            dropdownMenu.classList.remove('hidden');
-          } else {
-            dropdownMenu.classList.add('hidden');
-          }
-        });
-        const closeDropdown = function(event) {
-          dropdownTriggers.forEach(function(trigger) {
-            var dropdownMenu = trigger.querySelector('.absolute');
-            if (!trigger.contains(event.target) && !dropdownMenu.contains(event.target)) {
-              dropdownMenu.classList.add('hidden');
-            }
-          })
-        }
-        document.addEventListener("scroll", event => closeDropdown(event))
-
-        document.addEventListener('click', event => closeDropdown(event));
-
-
-      });
-    });
-  </script>
+ <script src="public/src/js/main.js"></script>
 
 
 
